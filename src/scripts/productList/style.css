@@ -1,0 +1,136 @@
+body { 
+    height: 100vh;
+    width: 100vw;
+    padding: 50px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-button {
+    display: flex;
+    height: 40px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-button__title-catalog {
+    font-size: 2.5em;
+    color: #24130C;
+}
+
+.title-button__button-add-products {
+    height: 40px;
+    width: 184px;
+    border-radius: 5px;
+    border: none;
+    color: #FFF;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: #90EE90;
+    cursor: pointer;
+    outline: none;
+}
+
+.container {
+    height: 700px;
+    width: 947px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.container__title {
+    font-size: 2.5em;
+    color: #B0E0E6;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.container__product-list {
+    height: 640px;
+    width: 947px;
+    border: 2px solid #24130C;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: auto;
+    padding-bottom: 30px;
+}
+
+.container__product-list1 {
+    height: 192px;
+    min-height: 192px;
+    width: 902px;
+    border: 2px solid #24130C;
+    border-radius: 9px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    word-break: break-all;
+}
+
+.image-oregano {
+    height: 138px;
+    width: 138px;
+    border-radius: 100px;
+}
+
+.data-product {
+    height: 146px;
+    width: 648px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-logo {
+    height: 48px;
+    width: 648px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-product {
+    font-size: 2em;
+    color: #FFC0CB;
+    font-weight: 600;
+}
+
+.logo-whatsapp {
+    height: 40px;
+    width: 40px;
+}
+
+.price-unity {
+    height: 36px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #FFC0CB;
+}
+
+.price-product {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.unity-product {
+    font-size: .9em;
+}
+
+.product-description {
+    font-size: .9em;
+    color: #24130C;
+}
