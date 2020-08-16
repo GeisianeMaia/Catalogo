@@ -1,4 +1,6 @@
 const baseUrl = "http://a1c6859d6b04.ngrok.io";
+const $button = document.querySelector(".button button");
+const $form = document.querySelector('.form')
 
 const userLogin = (config, callback) => {
   const { method, body, baseUrl } = config;
@@ -10,7 +12,7 @@ const userLogin = (config, callback) => {
     },
     body: body ? JSON.stringify(body) : undefined,
   };
- console.log(settings);
+  console.log(settings);
   fetch(baseUrl, settings)
     .then((response) => {
       return response.json();
@@ -23,31 +25,30 @@ const userLogin = (config, callback) => {
     });
 };
 
-const email = document.querySelector(".login input").value;
-const password = document.querySelector(".password input").value;
+$button.addEventListener("click", function () {
+  const email = document.querySelector(".login input").value;
+  const password = document.querySelector(".password input").value;
 
-const request = {
-  method: "POST",
-  body: {
-    email,
-    password
-    // "name": "Marcos",
-	// "lastName": "Maia",
-	// "fantasyName": "Marcos Temperos",
-	// "email": "maroaas@gmail.com",
-	// "password": "123456",
-	// "confirmPassword": "123456",
-	// "personalUrl": "marcos-temperos"
-  },
+  const request = {
+    method: "POST",
+    body: {
+      email,
+      password,
+    },
 
-  baseUrl: `${baseUrl}/user/login`,
-};
-userLogin(request, (data) => {
-  console.log(data);
+    baseUrl: `${baseUrl}/user/login`,
+  };
+  
+  userLogin(request, (data) => {
+    if(data.id){
+      localStorage.setItem('user_id_catologo', data.id)
+      window.location.href="/src/pages/productList.html"
+    }
+  });
 });
 
-// const userLogin;
+$form.addEventListener('submit', function(event){
+  event.preventDefault();
+})
 
-// userLogin.post('/login', function(resquest, response){
-//     response.render('formulario enviado')
-// });
+console.log(localStorage.getItem('user_id_catologo'));
